@@ -19,7 +19,7 @@ public class Health : MonoBehaviour
 
         healthText.text = health.ToString();
 
-        if (health <= 0)
+        if (health <= 0)    
         {
             if (isLocalPlayer)
             {

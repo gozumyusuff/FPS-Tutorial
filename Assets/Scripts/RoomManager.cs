@@ -9,9 +9,7 @@ public class RoomManager : MonoBehaviourPunCallbacks
     public static RoomManager instance;
 
     public GameObject player;
-    [Space]
     public Transform spawnPoint;
-
     public GameObject roomCam;
 
     private void Awake()
@@ -54,9 +52,6 @@ public class RoomManager : MonoBehaviourPunCallbacks
         roomCam.SetActive(false);
 
         SpawnPlayer();
-
-
-
 
     }
 
