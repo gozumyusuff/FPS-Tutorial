@@ -55,13 +55,20 @@ public class RoomManager : MonoBehaviourPunCallbacks
 
         SpawnPlayer();
 
+
+
+
     }
 
     public void SpawnPlayer()
     {
         GameObject _player = PhotonNetwork.Instantiate(player.name, spawnPoint.position, Quaternion.identity);
 
-        _player.GetComponent<PlayerSetup>().IsLocalPlayer();
+        if (_player.GetComponent<PhotonView>().IsMine)
+        {
+            _player.GetComponent<PlayerSetup>().IsLocalPlayer();
+        }
+
         _player.GetComponent<Health>().isLocalPlayer = true;
         
         
