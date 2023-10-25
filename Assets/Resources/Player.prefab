@@ -870,11 +870,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 67525e249f83575428656303fa7cd20f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.31
+      value: -0.311
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 67525e249f83575428656303fa7cd20f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.369
+      value: 0.437
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 67525e249f83575428656303fa7cd20f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1013,3 +1013,6 @@ MonoBehaviour:
   ammoText: {fileID: 8777664300532296433}
   animation: {fileID: 1626431320}
   reload: {fileID: 7400000, guid: e4056bd69be570a45b0825056f6c7539, type: 2}
+  recoverPercent: 1
+  recoilUp: 0.02
+  recoilBack: 0.08
