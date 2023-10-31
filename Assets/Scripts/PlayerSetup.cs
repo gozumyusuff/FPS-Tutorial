@@ -28,4 +28,6 @@ public class PlayerSetup : MonoBehaviour
 
         nicknameText.text = nickname;
     }
+
+
 }

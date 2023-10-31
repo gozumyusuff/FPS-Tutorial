@@ -36,11 +36,7 @@ public class RoomManager : MonoBehaviourPunCallbacks
         nameUI.SetActive(false);
         connectingUI.SetActive(true);
     }
-
-    void Start()
-    {
-       
-    }
+    
 
     public override void OnConnectedToMaster()
     {
@@ -70,6 +66,8 @@ public class RoomManager : MonoBehaviourPunCallbacks
         roomCam.SetActive(false);
 
         SpawnPlayer();
+
+        Cursor.lockState = CursorLockMode.Locked;
 
     }
 
