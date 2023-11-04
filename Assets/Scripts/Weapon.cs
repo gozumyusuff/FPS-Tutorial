@@ -97,10 +97,10 @@ public class Weapon : MonoBehaviour
 
     void Reload()
     {
-        animation.Play(reload.name);
 
         if (mag > 0 && ammo < 30)
         {
+            animation.Play(reload.name);
             mag--;
 
             ammo = magAmmo;
