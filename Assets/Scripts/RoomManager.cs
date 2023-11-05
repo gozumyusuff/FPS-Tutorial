@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
+using Photon.Realtime;
 
 public class RoomManager : MonoBehaviourPunCallbacks
 {
@@ -65,27 +66,29 @@ public class RoomManager : MonoBehaviourPunCallbacks
 
         roomCam.SetActive(false);
 
-        SpawnPlayer();
-
         Cursor.lockState = CursorLockMode.Locked;
+
+        SpawnPlayer();   
 
     }
 
     public void SpawnPlayer()
     {
-        Transform spawnPoint = spawnPoints[UnityEngine.Random.Range(0, spawnPoints.Length)];
+            Transform spawnPoint = spawnPoints[UnityEngine.Random.Range(0, spawnPoints.Length)];
 
-        GameObject _player = PhotonNetwork.Instantiate(player.name, spawnPoint.position, Quaternion.identity);
+            GameObject _player = PhotonNetwork.Instantiate(player.name, spawnPoint.position, Quaternion.identity);
 
         if (_player.GetComponent<PhotonView>().IsMine)
         {
             _player.GetComponent<PlayerSetup>().IsLocalPlayer();
+            _player.GetComponent<Health>().isLocalPlayer = true;
+
         }
 
-        _player.GetComponent<Health>().isLocalPlayer = true;
-
         _player.GetComponent<PhotonView>().RPC("SetNickname", RpcTarget.AllBuffered, nickname);
+        
         PhotonNetwork.LocalPlayer.NickName = nickname;
+
         
     }
 
