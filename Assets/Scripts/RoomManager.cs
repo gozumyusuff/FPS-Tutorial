@@ -54,7 +54,7 @@ public class RoomManager : MonoBehaviourPunCallbacks
         
         Debug.Log("we are in the lobby");
 
-        PhotonNetwork.JoinOrCreateRoom("test", null, null);
+        PhotonNetwork.JoinOrCreateRoom("test", null, null); 
         
     }
 
@@ -66,28 +66,30 @@ public class RoomManager : MonoBehaviourPunCallbacks
 
         roomCam.SetActive(false);
 
-        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.lockState = CursorLockMode.Locked;     
 
-        SpawnPlayer();   
+        SpawnPlayer();
 
     }
 
+    
     public void SpawnPlayer()
     {
             Transform spawnPoint = spawnPoints[UnityEngine.Random.Range(0, spawnPoints.Length)];
 
             GameObject _player = PhotonNetwork.Instantiate(player.name, spawnPoint.position, Quaternion.identity);
 
-        if (_player.GetComponent<PhotonView>().IsMine)
+       
+        if (_player.GetComponent<PhotonView>().IsMine) 
         {
             _player.GetComponent<PlayerSetup>().IsLocalPlayer();
             _player.GetComponent<Health>().isLocalPlayer = true;
 
-        }
+        }     
 
-        _player.GetComponent<PhotonView>().RPC("SetNickname", RpcTarget.AllBuffered, nickname);
+            _player.GetComponent<PhotonView>().RPC("SetNickname", RpcTarget.AllBuffered, nickname);
         
-        PhotonNetwork.LocalPlayer.NickName = nickname;
+            PhotonNetwork.LocalPlayer.NickName = nickname;
 
         
     }
