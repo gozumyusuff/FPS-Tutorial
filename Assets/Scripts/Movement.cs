@@ -9,7 +9,7 @@ public class Movement : MonoBehaviour
     public float sprintSpeed = 14f;
     public float maxVelocityChange = 10f;
     public float jumpHeight = 4f;
-    public float airControl = 0.5f;
+    public float airControl = 1f;
 
     private Vector2 input;
     private Rigidbody rb;
@@ -30,12 +30,17 @@ public class Movement : MonoBehaviour
         input.Normalize();
 
         sprinting = Input.GetButton("Sprint");
-        jumping = Input.GetButton("Jump");
+        jumping = Input.GetButtonDown("Jump");
     }
 
-    private void OnTriggerStay(Collider other)
+    private void OnCollisionStay(Collision collision)
     {
         grounded = true;
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        grounded = false;
     }
 
     private void FixedUpdate()

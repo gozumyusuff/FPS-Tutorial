@@ -362,7 +362,7 @@ MonoBehaviour:
   sprintSpeed: 14
   maxVelocityChange: 10
   jumpHeight: 4
-  airControl: 2
+  airControl: 1
 --- !u!114 &8754159503362741436
 MonoBehaviour:
   m_ObjectHideFlags: 0

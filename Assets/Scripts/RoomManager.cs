@@ -18,11 +18,13 @@ public class RoomManager : MonoBehaviourPunCallbacks
 
     private string nickname = "unnamed";
 
+
     private void Awake()
     {
         instance = this;
     }
 
+    
     public void ChangeNickname(string _name)
     {
         nickname = _name;
@@ -66,26 +68,19 @@ public class RoomManager : MonoBehaviourPunCallbacks
 
         roomCam.SetActive(false);
 
-        Cursor.lockState = CursorLockMode.Locked;     
+        Cursor.lockState = CursorLockMode.Locked;
 
-        SpawnPlayer();
-
+        SpawnPlayer();     
     }
-
     
     public void SpawnPlayer()
     {
             Transform spawnPoint = spawnPoints[UnityEngine.Random.Range(0, spawnPoints.Length)];
 
             GameObject _player = PhotonNetwork.Instantiate(player.name, spawnPoint.position, Quaternion.identity);
-
        
-        if (_player.GetComponent<PhotonView>().IsMine) 
-        {
             _player.GetComponent<PlayerSetup>().IsLocalPlayer();
             _player.GetComponent<Health>().isLocalPlayer = true;
-
-        }     
 
             _player.GetComponent<PhotonView>().RPC("SetNickname", RpcTarget.AllBuffered, nickname);
         
