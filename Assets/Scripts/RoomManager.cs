@@ -69,6 +69,7 @@ public class RoomManager : MonoBehaviourPunCallbacks
         roomCam.SetActive(false);
 
         Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
 
         SpawnPlayer();     
     }
@@ -79,8 +80,11 @@ public class RoomManager : MonoBehaviourPunCallbacks
 
             GameObject _player = PhotonNetwork.Instantiate(player.name, spawnPoint.position, Quaternion.identity);
        
+        if (_player.GetComponent<PhotonView>().IsMine)
+        {
             _player.GetComponent<PlayerSetup>().IsLocalPlayer();
             _player.GetComponent<Health>().isLocalPlayer = true;
+        }
 
             _player.GetComponent<PhotonView>().RPC("SetNickname", RpcTarget.AllBuffered, nickname);
         
