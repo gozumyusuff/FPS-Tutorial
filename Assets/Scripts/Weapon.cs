@@ -23,10 +23,7 @@ public class Weapon : MonoBehaviour
     public TextMeshProUGUI ammoText;
 
     public Animation animation;
-    public AnimationClip reload;
-
-    //[Range(0, 1)]
-    //public float recoilPercent = 0.3f;
+    public AnimationClip reload;   
 
     [Range(0, 1)]
     public float recoverPercent = 0.7f;
