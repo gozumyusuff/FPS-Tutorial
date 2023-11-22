@@ -7,7 +7,7 @@ using TMPro;
 
 public class PlayerSetup : MonoBehaviour
 {
-    public Movement movement;
+    public NewMovement movement;
 
     public GameObject camera;
 
