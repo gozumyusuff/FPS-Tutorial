@@ -8,8 +8,8 @@ public class Movement : MonoBehaviour
     public float walkSpeed = 8f;
     public float sprintSpeed = 14f;
     public float maxVelocityChange = 10f;
-    public float jumpHeight = 4f;
-    public float airControl = 1f;
+    public float jumpHeight = 30f;
+    public float airControl = 0.5f;
 
     private Vector2 input;
     private Rigidbody rb;
