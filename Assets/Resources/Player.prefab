@@ -148,6 +148,7 @@ GameObject:
   - component: {fileID: 1064820932733053315}
   - component: {fileID: 1064820932733053314}
   - component: {fileID: 4088379410767235825}
+  - component: {fileID: 3058295281408651148}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -245,6 +246,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sensitivity: 2
   smoothing: 2
+--- !u!114 &3058295281408651148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1064820932733053313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d8fe224de628d449b45b1d7488bc798, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zoom: 1
+  normal: 60
+  smooth: 5
 --- !u!1 &1064820934238731088
 GameObject:
   m_ObjectHideFlags: 0
@@ -504,16 +520,16 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1064820934238731088}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8dc8c44957fd24a45b1b6f0f6c1efce8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 4
+  walkSpeed: 8
   sprintSpeed: 14
   maxVelocityChange: 10
-  jumpHeight: 30
-  airControl: 0.5
+  jumpHeight: 6
+  airControl: 1.3
 --- !u!1 &1145717095118900715
 GameObject:
   m_ObjectHideFlags: 0
@@ -1718,7 +1734,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ee87bb48e243344abcb3e1f195c9da0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  swayClamp: 0.09
+  swayClamp: 0.25
   smoothing: 3
 --- !u!114 &8634230053543340297
 MonoBehaviour:

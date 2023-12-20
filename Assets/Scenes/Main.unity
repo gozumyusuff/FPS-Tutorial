@@ -634,7 +634,7 @@ GameObject:
   - component: {fileID: 72108677}
   - component: {fileID: 72108676}
   - component: {fileID: 72108675}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1089,14 +1089,6 @@ MonoBehaviour:
   - {fileID: 1658196538}
   - {fileID: 568561499}
   scoreTexts:
-  - {fileID: 476832116}
-  - {fileID: 1007681333}
-  - {fileID: 1096315960}
-  - {fileID: 330163251}
-  - {fileID: 1510269023}
-  - {fileID: 304859190}
-  - {fileID: 434065249}
-  nameTexts:
   - {fileID: 1028708742}
   - {fileID: 455375318}
   - {fileID: 1082072940}
@@ -1104,6 +1096,14 @@ MonoBehaviour:
   - {fileID: 1602995621}
   - {fileID: 3535517}
   - {fileID: 1386931211}
+  nameTexts:
+  - {fileID: 476832116}
+  - {fileID: 1007681333}
+  - {fileID: 1096315960}
+  - {fileID: 330163251}
+  - {fileID: 1510269023}
+  - {fileID: 304859190}
+  - {fileID: 434065249}
 --- !u!1001 &214281851
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1597,7 +1597,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 712078187}
+      - m_Target: {fileID: 712078189}
         m_TargetAssemblyTypeName: RoomManager, Assembly-CSharp
         m_MethodName: JoinRoomButtonPressed
         m_Mode: 1
@@ -4427,7 +4427,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 712078188}
-  - component: {fileID: 712078187}
+  - component: {fileID: 712078189}
   m_Layer: 0
   m_Name: RoomManager
   m_TagString: Untagged
@@ -4435,7 +4435,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &712078187
+--- !u!4 &712078188
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 712078186}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 252947009}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &712078189
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4456,22 +4472,6 @@ MonoBehaviour:
   roomCam: {fileID: 252947008}
   nameUI: {fileID: 1386433898}
   connectingUI: {fileID: 1621552206}
---- !u!4 &712078188
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 712078186}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 252947009}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &712735726 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8587048437761923911, guid: ac006f1c9321c054e96f86dee52dc183, type: 3}
@@ -11394,7 +11394,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 712078187}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: RoomManager, Assembly-CSharp
         m_MethodName: ChangeNickname
         m_Mode: 0
