@@ -528,8 +528,8 @@ MonoBehaviour:
   walkSpeed: 8
   sprintSpeed: 14
   maxVelocityChange: 10
-  jumpHeight: 6
-  airControl: 1.3
+  jumpHeight: 3
+  airControl: 5
 --- !u!1 &1145717095118900715
 GameObject:
   m_ObjectHideFlags: 0
@@ -1734,7 +1734,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ee87bb48e243344abcb3e1f195c9da0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  swayClamp: 0.25
+  swayClamp: 0.09
   smoothing: 3
 --- !u!114 &8634230053543340297
 MonoBehaviour:

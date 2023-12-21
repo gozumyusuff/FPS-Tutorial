@@ -9,7 +9,7 @@ public class Movement : MonoBehaviour
     public float sprintSpeed = 14f;
     public float maxVelocityChange = 10f;
     public float jumpHeight = 3f;
-    public float airControl = 5f;
+    public float airControl = 1.5f;
 
     private Vector2 input;
     private Rigidbody rb;

@@ -12,6 +12,8 @@ public class Health : MonoBehaviour
 
     public TextMeshProUGUI healthText;
 
+    public float respawnDelay = 3f;
+
     [PunRPC]
     public void TakeDamage(int _damage)
     {
@@ -24,7 +26,7 @@ public class Health : MonoBehaviour
             if (isLocalPlayer)
             {
             RoomManager.instance.SpawnPlayer();
-            }
+            }           
 
             Destroy(gameObject);
             Debug.Log("dead");

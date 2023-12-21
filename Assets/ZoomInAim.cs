@@ -11,6 +11,7 @@ public class ZoomInAim : MonoBehaviour
     private bool isZoomed = false;
     private bool notZoomed = true;
 
+
     void Update()
     {
         if (Input.GetMouseButtonDown(1))
