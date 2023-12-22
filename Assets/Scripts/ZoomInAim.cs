@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ZoomInAim : MonoBehaviour
 {
-    public int zoom = 20;
+    public int zoom = 1;
     public int normal = 60;
     public float smooth = 5;
 

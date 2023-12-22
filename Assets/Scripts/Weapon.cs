@@ -9,7 +9,7 @@ public class Weapon : MonoBehaviour
 {
     public int damage;
     public Camera camera;
-    public float fireRate;
+    public float fireRate = 10f;
 
     public GameObject hitVFX;
 
@@ -28,9 +28,9 @@ public class Weapon : MonoBehaviour
     [Range(0, 1)]
     public float recoverPercent = 0.7f;
 
-    public float recoilUp = 1f;
+    public float recoilUp = 0.02f;
 
-    public float recoilBack = 0f;
+    public float recoilBack = 0.08f;
 
     private Vector3 originalPosition;
     private Vector3 recoilVelocity = Vector3.zero;

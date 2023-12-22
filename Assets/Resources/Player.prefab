@@ -148,7 +148,7 @@ GameObject:
   - component: {fileID: 1064820932733053315}
   - component: {fileID: 1064820932733053314}
   - component: {fileID: 4088379410767235825}
-  - component: {fileID: 3058295281408651148}
+  - component: {fileID: 2648472008114002488}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -246,7 +246,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sensitivity: 2
   smoothing: 2
---- !u!114 &3058295281408651148
+--- !u!114 &2648472008114002488
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -513,6 +513,7 @@ MonoBehaviour:
   health: 100
   isLocalPlayer: 0
   healthText: {fileID: 1639266940084184833}
+  respawnDelay: 3
 --- !u!114 &718557522557576335
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -529,7 +530,7 @@ MonoBehaviour:
   sprintSpeed: 14
   maxVelocityChange: 10
   jumpHeight: 3
-  airControl: 5
+  airControl: 1.5
 --- !u!1 &1145717095118900715
 GameObject:
   m_ObjectHideFlags: 0
@@ -1751,7 +1752,7 @@ MonoBehaviour:
   damage: 25
   camera: {fileID: 1064820932733053315}
   fireRate: 10
-  hitVFX: {fileID: 2708598583397607911, guid: 6398d43fe79ea0140913dc5530c646af, type: 3}
+  hitVFX: {fileID: 5880797563127281583, guid: 265d3a5ba69981a4698ceabcedf368b0, type: 3}
   mag: 5
   ammo: 30
   magAmmo: 30
