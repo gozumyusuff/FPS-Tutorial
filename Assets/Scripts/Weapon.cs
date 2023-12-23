@@ -116,8 +116,6 @@ public class Weapon : MonoBehaviour
         
         RaycastHit hit;
 
-        PhotonNetwork.LocalPlayer.AddScore(1);
-
         if (Physics.Raycast(ray.origin, ray.direction, out hit, 100f ))
         {
             PhotonNetwork.Instantiate(hitVFX.name, hit.point, Quaternion.identity);

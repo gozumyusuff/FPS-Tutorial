@@ -521,7 +521,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1064820934238731088}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8dc8c44957fd24a45b1b6f0f6c1efce8, type: 3}
   m_Name: 
@@ -530,7 +530,7 @@ MonoBehaviour:
   sprintSpeed: 14
   maxVelocityChange: 10
   jumpHeight: 3
-  airControl: 1.5
+  airControl: 0.65
 --- !u!1 &1145717095118900715
 GameObject:
   m_ObjectHideFlags: 0
